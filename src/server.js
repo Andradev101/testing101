@@ -1,5 +1,5 @@
 // server
-var PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 5500;
 const express = require('express')
 const server = express()
 const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('./pages')
@@ -13,18 +13,11 @@ nunjucks.configure('src/views', {
 
 })
 
-// start and configurations server
-app.listen(port);
 server
-// receive datas in req.body
 .use(express.urlencoded({ extended: true }))
-// configure folders estatics (css, scripts, images)
 .use(express.static("public"))
-//
-// aplication roots 
 .get("/", pageLanding)
 .get("/study",pageStudy)
 .get("/give-classes", pageGiveClasses)
 .post("/save-classes", saveClasses)
-// start server
 .listen(PORT, () => console.log(`Listening on ${ PORT }`))

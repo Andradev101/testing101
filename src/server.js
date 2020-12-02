@@ -9,8 +9,7 @@ const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('./page
 const nunjucks = require('nunjucks')
 nunjucks.configure('src/views', {
     express: server,
-    noCache: true,
-
+    noCache: true
 })
 
 server

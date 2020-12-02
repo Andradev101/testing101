@@ -14,7 +14,7 @@ nunjucks.configure('src/views', {
 })
 
 // start and configurations server
-
+app.listen(port);
 server
 // receive datas in req.body
 .use(express.urlencoded({ extended: true }))

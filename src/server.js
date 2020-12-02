@@ -1,4 +1,5 @@
 // server
+var PORT = process.env.PORT || 5500;
 const express = require('express')
 const server = express()
 const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('./pages')

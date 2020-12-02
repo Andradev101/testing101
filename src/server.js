@@ -27,4 +27,4 @@ server
 .get("/give-classes", pageGiveClasses)
 .post("/save-classes", saveClasses)
 // start server
-.listen(5500)
+.listen(PORT, () => console.log(`Listening on ${ PORT }`))
